@@ -119,3 +119,5 @@ public/
 ## License
 
 MIT — Enchantia Realms
+
+<!-- Deployment test: Mon Feb 23 17:23:00 EST 2026 -->
