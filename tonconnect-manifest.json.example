@@ -1,0 +1,25 @@
+# QR Studio - TON Connect Manifest
+
+{
+  "url": "https://your-domain.com",
+  "name": "QR Studio",
+  "iconUrl": "https://your-domain.com/icon.png",
+  "termsOfUseUrl": "https://your-domain.com/terms",
+  "privacyPolicyUrl": "https://your-domain.com/privacy"
+}
+
+## Instructions
+
+1. Replace `your-domain.com` with your actual domain
+2. Create a 512x512 PNG icon
+3. Upload this file as `tonconnect-manifest.json` to your domain root
+4. Set `VITE_TON_CONNECT_MANIFEST` to the full URL
+
+## Environment Variables
+
+```bash
+VITE_BOT_USERNAME=your_bot_username
+VITE_STRIPE_PAYMENT_LINK=https://buy.stripe.com/...
+VITE_TON_CONNECT_MANIFEST=https://your-domain.com/tonconnect-manifest.json
+VITE_TON_WALLET_ADDRESS=YOUR_TON_WALLET_ADDRESS
+```
