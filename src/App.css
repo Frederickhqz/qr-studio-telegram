@@ -1,0 +1,398 @@
+/* QR Studio - Telegram Mini App Styles */
+
+:root {
+  --primary: #2481cc;
+  --primary-hover: #1a6db3;
+  --ton-blue: #0088cc;
+  --success: #30d158;
+  --bg-dark: #0a0a0a;
+  --bg-card: #1a1a1a;
+  --bg-input: #2a2a2a;
+  --text: #ffffff;
+  --text-muted: #888;
+  --border: #333;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg-dark);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+/* Payment Wall */
+.payment-wall {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.payment-card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--bg-card);
+  border-radius: 20px;
+  padding: 32px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.payment-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.payment-card h1 {
+  font-size: 28px;
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.payment-tagline {
+  color: var(--text-muted);
+  margin: 0 0 24px;
+  font-size: 15px;
+}
+
+.price-tag {
+  margin: 24px 0;
+  padding: 20px;
+  background: rgba(36, 129, 204, 0.1);
+  border-radius: 16px;
+  border: 2px solid var(--primary);
+}
+
+.price {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--primary);
+  display: block;
+}
+
+.price-alt {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  display: block;
+}
+
+.features {
+  text-align: left;
+  margin: 24px 0;
+  padding: 20px;
+  background: var(--bg-input);
+  border-radius: 12px;
+}
+
+.feature {
+  padding: 8px 0;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.payment-methods {
+  margin-top: 24px;
+}
+
+.pay-btn {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 12px;
+}
+
+.pay-btn.stripe {
+  background: linear-gradient(135deg, #635bff 0%, #8b5cf6 100%);
+  color: white;
+}
+
+.pay-btn.stripe:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(99, 91, 255, 0.3);
+}
+
+.pay-btn.ton {
+  background: var(--ton-blue);
+  color: white;
+}
+
+.pay-btn.ton:hover:not(:disabled) {
+  background: #0077b3;
+}
+
+.pay-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.or-divider {
+  color: var(--text-muted);
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.ton-section {
+  margin-top: 16px;
+}
+
+.secure-note {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin-top: 16px;
+}
+
+/* Main App */
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  font-size: 24px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.paid-badge {
+  background: var(--success);
+  color: black;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+}
+
+.panel {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid var(--border);
+}
+
+.section {
+  margin-bottom: 24px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.section h3 {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* QR Type Grid */
+.type-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .type-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.type-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 8px;
+  background: var(--bg-input);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--text);
+}
+
+.type-btn:hover {
+  border-color: var(--primary);
+}
+
+.type-btn.active {
+  background: rgba(36, 129, 204, 0.2);
+  border-color: var(--primary);
+}
+
+.type-icon {
+  font-size: 20px;
+}
+
+.type-label {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--text-muted);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 15px;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Options */
+.option-group {
+  margin-bottom: 20px;
+}
+
+.option-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--text-muted);
+}
+
+.color-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.color-row input[type="color"] {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: none;
+}
+
+/* Preview Panel */
+.preview-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.preview-card {
+  width: 100%;
+  aspect-ratio: 1;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.download-btns {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.download-btns button {
+  flex: 1;
+  padding: 14px 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.download-btns button:hover {
+  background: var(--primary-hover);
+}
+
+/* TON Connect Button Override */
+[data-tc-connect-button] {
+  width: 100% !important;
+  margin-bottom: 12px !important;
+}
